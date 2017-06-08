@@ -1,0 +1,40 @@
+//
+//  pchFile.pch
+//  HomeHome
+//
+//  Created by 福利郑 on 16/12/18.
+//  Copyright © 2016年 福利郑. All rights reserved.
+//
+
+#ifndef pchFile_pch
+#define pchFile_pch
+
+#import "VTGeneralTool.h"
+
+#import "HHAppDelegate.h"
+#import "HHConfig.h"
+#import "Api.h"
+
+
+#import "RDVTabBarController.h"
+#import "RDVTabBar.h"
+#import "RDVTabBarItem.h"
+
+//首页
+#import "HomePageViewController.h"
+//孩子动态
+#import "AboutChildViewController.h"
+//发现
+#import "CommuntiyViewController.h"
+//课程
+#import "CourseViewController.h"
+#import "SZCourseListViewController.h"
+//我
+#import "AboutMeViewController.h"
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* pchFile_pch */
