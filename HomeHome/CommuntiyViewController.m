@@ -8,31 +8,39 @@
 
 #import "CommuntiyViewController.h"
 #import "Masonry.h"
-@interface CommuntiyViewController(){
-    
-}
+
+#define  imageViewSize CGSizeMake(10, 10);
+#define  IMAGE_SIZE   10
 
 
+@interface CommuntiyViewController()
 
+@property(nonatomic,strong) UIView *containerView;
+@property(nonatomic,strong) NSMutableArray *widthConstraints;
 @end
+
 @implementation CommuntiyViewController
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     UIImageView *imageView1 = [[UIImageView alloc]init];
-    MASConstraint *width = [self setView:imageView1 size:imageViewSize left:_containerView.mas_left centerY:_containerView.mas_centerY];
+    MASConstraint *width = [self fromView:imageView1 size:imageViewSize viewLeft:_containerView.mas_left viewCenterY:_containerView.mas_centerY];
     [_widthConstraints addObject:width];
     
     UIImageView *imageView2 = [[UIImageView alloc]init];
-    width = [self setView:imageView2 size:imageViewSize left:imageView1.mas_right centerY:_containerView.mas_centerY];
+    width = [self fromView:imageView2 size:imageViewSize viewLeft:imageView1.mas_right viewCenterY:_containerView.mas_centerY];
     [_widthConstraints addObject:width];
     
     UIImageView *imageView3 = [[UIImageView alloc]init];
-    width = [self setView:imageView3 size:imageViewSize left:imageView2.mas_right centerY:_containerView.mas_centerY];
+    width = [self fromView:imageView3 size:imageViewSize viewLeft:imageView2.mas_right viewCenterY:_containerView.mas_centerY];
     [_widthConstraints addObject:width];
     
     UIImageView *imageView4 = [[UIImageView alloc]init];
-    width = [self setView:imageView4 size:imageViewSize left:imageView3.mas_right centerY:_containerView.mas_centerY];
+    width = [self fromView:imageView4 size:imageViewSize viewLeft:imageView3.mas_right viewCenterY:_containerView.mas_centerY];
     [_widthConstraints addObject:width];
     
     //最后设置最右边的imageView的右边与父view的最有对齐
@@ -52,6 +60,7 @@
 }
 
 
+#pragma mark 私有方法
 - (void)showOrHideImage:(UISwitch *)sender {
     NSUInteger index = (NSUInteger) sender.tag;
     MASConstraint *width = _widthConstraints[index];
@@ -73,7 +82,7 @@
  *
  *  @return 返回宽约束，用于显示、隐藏单个view
  */
-- (MASConstraint *)setView:(UIView *)view size:(CGSize)size left:(MASViewAttribute *)left centerY:(MASViewAttribute *)centerY {
+- (MASConstraint *)fromView:(UIView *)view size:(CGSize)size viewLeft:(MASViewAttribute *)left viewCenterY:(MASViewAttribute *)centerY {
     
     __block MASConstraint *widthConstraint;
     
@@ -90,4 +99,23 @@
     
     return widthConstraint;
 }
+
+#pragma mark  懒加载
+-(UIView *)containerView{
+    
+    if(!_containerView){
+        _containerView = [UIView new];
+    }
+    return _containerView;
+    
+}
+-(NSMutableArray *)widthConstraints{
+    
+    if(!_widthConstraints){
+        _widthConstraints = [NSMutableArray array];
+    }
+    return  _widthConstraints;
+    
+}
+
 @end
