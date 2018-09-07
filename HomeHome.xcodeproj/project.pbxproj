@@ -220,8 +220,6 @@
 		5F07BF7A1E06360200FBD186 /* HomeHome */ = {
 			isa = PBXGroup;
 			children = (
-				5F29FFB42142C67500B016D7 /* feature_3 */,
-				5F29FFB32142C66B00B016D7 /* feature_2 */,
 				5F29FFB12142C64200B016D7 /* feature_1 */,
 				5F07BF7E1E06360200FBD186 /* HHAppDelegate.h */,
 				5F07BF7F1E06360200FBD186 /* HHAppDelegate.m */,
@@ -514,20 +512,6 @@
 			children = (
 			);
 			name = feature_1;
-			sourceTree = "<group>";
-		};
-		5F29FFB32142C66B00B016D7 /* feature_2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = feature_2;
-			sourceTree = "<group>";
-		};
-		5F29FFB42142C67500B016D7 /* feature_3 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = feature_3;
 			sourceTree = "<group>";
 		};
 		5F3B42EF1E0B994D0097DE9E /* ADCarouselView */ = {
