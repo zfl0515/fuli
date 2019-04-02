@@ -280,7 +280,8 @@
 		5F07BFB91E06395500FBD186 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				5F07BFE21E06D41300FBD186 /* 我 */,
+				5F0A41DD219A88500097338C /* HotelDetails */,
+				5F07BFE21E06D41300FBD186 /* AboutHotel */,
 				5F07BFE11E06D40600FBD186 /* 课程 */,
 				5F07BFE01E06D3FD00FBD186 /* 孩子 */,
 				5F07BFDF1E06D3F000FBD186 /* 发现 */,
@@ -376,14 +377,11 @@
 			name = "课程";
 			sourceTree = "<group>";
 		};
-		5F07BFE21E06D41300FBD186 /* 我 */ = {
+		5F07BFE21E06D41300FBD186 /* AboutHotel */ = {
 			isa = PBXGroup;
 			children = (
-				5F07BFE51E06D43E00FBD186 /* Views */,
-				5F07BFE41E06D42C00FBD186 /* Models */,
-				5F07BFE31E06D41C00FBD186 /* Controller */,
 			);
-			name = "我";
+			name = AboutHotel;
 			sourceTree = "<group>";
 		};
 		5F07BFE31E06D41C00FBD186 /* Controller */ = {
@@ -395,14 +393,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		5F07BFE41E06D42C00FBD186 /* Models */ = {
+		5F07BFE41E06D42C00FBD186 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			name = Model;
 			sourceTree = "<group>";
 		};
-		5F07BFE51E06D43E00FBD186 /* Views */ = {
+		5F07BFE51E06D43E00FBD186 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5FCA78851E0C240A00D84A3E /* NaView.h */,
@@ -411,7 +409,7 @@
 				5FCA78881E0C240A00D84A3E /* UserCell.m */,
 				5FCA78891E0C240A00D84A3E /* UserCell.xib */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
 		5F07BFE61E06D44B00FBD186 /* Controller */ = {
@@ -504,6 +502,16 @@
 				5FB89A231EDDD2CB008D9404 /* VTGeneralTool.m */,
 			);
 			name = Szdtoo;
+			sourceTree = "<group>";
+		};
+		5F0A41DD219A88500097338C /* HotelDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5F07BFE31E06D41C00FBD186 /* Controller */,
+				5F07BFE41E06D42C00FBD186 /* Model */,
+				5F07BFE51E06D43E00FBD186 /* View */,
+			);
+			name = HotelDetails;
 			sourceTree = "<group>";
 		};
 		5F3B42EF1E0B994D0097DE9E /* ADCarouselView */ = {
